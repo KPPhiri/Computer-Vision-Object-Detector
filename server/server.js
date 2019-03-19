@@ -18,21 +18,25 @@ server.listen(8080, () => {
 });
 
 //Microsoft Azure API access
+'use strict';
+
+// Replace <Subscription Key> with your valid subscription key.
 var subscriptionKey = "44e9358a43ad440492b8f84c13dc2b2e";
 
 // You must use the same location in your REST call as you used to get your
 // subscription keys. For example, if you got your subscription keys from
 // westus, replace "westcentralus" in the URL below with "westus".
 const uriBase =
-    'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/ocr';
+    'https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/analyze';
 
-const imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/' +
-    'Atomist_quote_from_Democritus.png/338px-Atomist_quote_from_Democritus.png';
+const imageUrl =
+    'https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg';
 
 // Request parameters.
 const params = {
-    'language': 'unk',
-    'detectOrientation': 'true',
+    'visualFeatures': 'Categories,Description,Color',
+    'details': '',
+    'language': 'en'
 };
 
 const options = {
@@ -53,9 +57,8 @@ request.post(options, (error, response, body) => {
   let jsonResponse = JSON.stringify(JSON.parse(body), null, '  ');
   console.log('JSON Response\n');
   console.log(jsonResponse);
+
 });
-
-
 
 
 
