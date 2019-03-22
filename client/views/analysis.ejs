@@ -25,13 +25,17 @@
     <iframe src="test.mp4" width="850" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
   <div class="col-sm-2 sidenav">
-    <% timestamps.forEach(function(timestamp) {%>
-      <div class="well">
-        <p>Path: <%=timestamp.file_path %></p>
-        <p>Hour: <%=timestamp.min %></p>
-        <p>min: <%=timestamp.sec %></p>
-      </div>
-    <% }); %>
+    <h6>Timestamps</h6>
+    <div  style="max-height: 600;overflow-y: scroll;"> 
+      <% timestamps.forEach(function(timestamp) {%>
+        <div class="well">
+          <p>Path: <%=timestamp.file_path %></p>
+          <p>Hour: <%=timestamp.min %></p>
+          <p>min: <%=timestamp.sec %></p>
+          <p>Objects: <%=timestamp.sus_objects %></p>
+        </div>
+      <% }); %>
+    <div>
   </div>
 </div>
 </div>
