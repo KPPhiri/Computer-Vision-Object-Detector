@@ -3,8 +3,8 @@ import sys
 import time
 # If you are using a Jupyter notebook, uncomment the following line.
 #%matplotlib inline
-import matplotlib.pyplot as plt
-from PIL import Image
+# import matplotlib.pyplot as plt
+# from PIL import Image
 from io import BytesIO
 
 # Replace <Subscription Key> with your valid subscription key.
@@ -39,12 +39,12 @@ response.raise_for_status()
 analysis = response.json()
 print(analysis)
 image_caption = analysis["description"]["captions"][0]["text"].capitalize()
-
-# Display the image and overlay it with the caption.
-image = Image.open(BytesIO(image_data))
-plt.imshow(image)
-plt.axis("off")
-_ = plt.title(image_caption, size="x-large", y=-0.1)
+#
+# # Display the image and overlay it with the caption.
+# image = Image.open(BytesIO(image_data))
+# # plt.imshow(image)
+# # plt.axis("off")
+# # _ = plt.title(image_caption, size="x-large", y=-0.1)
 
 ##print(response)
 sys.stdout.flush()

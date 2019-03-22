@@ -20,7 +20,7 @@ server.listen(8080, () => {
 });
 
 
-analyzer.analyze('');
+analyzer.analyze();
 
 
 var vid_timestamps = [];
