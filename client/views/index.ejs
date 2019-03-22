@@ -1,1 +1,128 @@
-<h1>HELLO WORLD! EJS</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Intelligent Hawkeyes</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<h1>Welcome</h1>
+<h4>Choose a video to analyze</h4>
+
+<% videos.forEach(function(video) {%>
+  <div class="responsive">
+    <div class="gallery">
+      <form action='/analysis' method= 'GET'>
+          <button name="action" value="blue"><img src="<%= video.thumbnail_path %>" alt="blue" width="300" height="300"></button>
+      </form>
+      <div class="desc"><%= video.video_name %>: <%= video.date %></div>
+    </div>
+  </div>
+
+<% }); %>
+
+
+<!--
+
+<div class="responsive">
+  <div class="gallery">
+    <form action='/analysis' method= 'GET'>
+        <button name="action" value="blue"><img src="/img/Shaki_waterfall.jpg" alt="blue" width="300" height="250"></button>
+    </form>
+    <div class="desc">Home Back Door Camera: 09/12/2018</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <form action='/analysis' method= 'GET'>
+        <button name="action" value="blue"><img src="/img/dog.jpg" alt="blue" width="20px" height="20px"></button>
+    </form>
+    <div class="desc">Home Front Door Camera: 10/03/2018</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <form action='/analysis' method= 'GET'>
+        <button name="action" value="blue"><img src="/img/Shaki_waterfall.jpg" alt="blue" width="300px" height="250px"></button>
+    </form>
+    <div class="desc">Store Front Door Camera:</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <form action='/analysis' method= 'GET'>
+        <button name="action" value="blue"><img src="/img/dog.jpg" alt="blue" width="300px" height="250px"></button>
+    </form>
+    <div class="desc">Garage Camera: 01/01/2019</div>
+  </div>
+</div> -->
+
+
+</body>
+</html>
