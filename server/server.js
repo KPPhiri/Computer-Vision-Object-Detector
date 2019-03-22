@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const request = require('request');
 const fs = require('file-system');
 const app = express();
+const analyzer = require('./analyzer');
 
 const clientPath = __dirname + '/../client';
 console.log('!!!Serving static from ' + __dirname + '/../client');
@@ -19,7 +20,7 @@ server.listen(8080, () => {
 });
 
 
-
+analyzer.analyze('');
 
 
 var vid_timestamps = [];
