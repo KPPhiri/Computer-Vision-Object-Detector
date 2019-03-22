@@ -62,8 +62,68 @@ request.post(options, (error, response, body) => {
     return;
   }
 
-	arr =[]
+	arr =["mask", "gun", "knife"];
 //
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "testing1231232133",
+	min: 9,
+	sec: 2,
+	sus_objects: arr
+}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+			// console.log("ADDING NEW")
+			// console.log(vid);
+	}
+});
+
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "dragon1231232133",
+min: 5,
+sec: 3,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+		// console.log("ADDING NEW")
+		// console.log(vid);
+}
+});
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "a[[;es1231232133",
+min: 1,
+sec: 43,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+		// console.log("ADDING NEW")
+		// console.log(vid);
+}
+});
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "localdir//:s1231232133",
+min: 8,
+sec: 9,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+}
+});
+
 	Timestamp.create({
 		video_name: 'Testing123566',
 		file_path: "testing1231232133",
