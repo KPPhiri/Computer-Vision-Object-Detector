@@ -6,9 +6,10 @@ const request = require('request');
 const fs = require('file-system');
 const app = express();
 
-const clientPath = './../client';
-console.log('!!!Serving static from ' + clientPath);
-app.use(express.static(clientPath));
+const clientPath = __dirname + '/../client';
+console.log('!!!Serving static from ' + __dirname + '/../client');
+app.use(express.static(__dirname + '/../client'));
+
 
 //creating local server
 app.set('view engine', 'ejs');
@@ -17,6 +18,12 @@ server.listen(8080, () => {
 	console.log('Starting server on localhost:8080');
 });
 
+
+
+
+
+var vid_timestamps = [];
+var timestamps = [];
 //Microsoft Azure API access
 'use strict';
 
@@ -54,93 +61,199 @@ request.post(options, (error, response, body) => {
     console.log('Error: ', error);
     return;
   }
-  let jsonResponse = JSON.stringify(JSON.parse(body), null, '  ');
-  console.log('JSON Response\n');
-  console.log(jsonResponse);
+
+	arr =[]
+//
+	Timestamp.create({
+		video_name: 'Testing123566',
+		file_path: "testing1231232133",
+		min: 9,
+		sec: 2,
+		sus_objects: arr
+	}, function(err, vid) {
+    if(err) {
+        console.log(err);
+    } else {
+        // console.log("ADDING NEW")
+        // console.log(vid);
+    }
+});
+
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "dragon1231232133",
+	min: 5,
+	sec: 3,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+			// console.log("ADDING NEW")
+			// console.log(vid);
+	}
+});
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "a[[;es1231232133",
+	min: 1,
+	sec: 43,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+			// console.log("ADDING NEW")
+			// console.log(vid);
+	}
+});
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "localdir//:s1231232133",
+	min: 8,
+	sec: 9,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+
+Video.create({
+	video_name: 'Back Home Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://www.w3schools.com/CSS/img_5terre.jpg',
+	date: '09/01/2018'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Front Home Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://www.w3schools.com/CSS/img_mountains.jpg',
+	date: '03/01/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Garage Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://www.w3schools.com/CSS/img_forest.jpg',
+	date: '01/01/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Store Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://www.w3schools.com/CSS/img_lights.jpg',
+	// thumbnail_path: '/img/Shaki_waterfall.jpg',
+	date: '02/21/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
 
 });
 
 
 
+function parseJSON(string_object) {
+	let jsonResponse = JSON.stringify(JSON.parse(string_object), null, '  ');
+	var object = parseJSON(JSON.parse(body));
 
+	var arr = object["description"]["tags"];
+}
 
 //create suspecious_videos db inside mongodb
 mongoose.connect('mongodb://localhost/video_repo');
 
 
 //schema setup
+var timestampSchema = new mongoose.Schema({
+	video_name: String,
+  file_path: String,
+	min: Number,
+	sec: Number,
+	sus_objects: Array
+});
+
 var videoSchema = new mongoose.Schema({
 	video_name: String,
   file_path: String,
-	sus_objects: [{
-			 name: String,
-			 values: mongoose.Schema.Types.Mixed
-	 }]
+	thumbnail_path: String,
+	date: String
 });
 
+
 //Creating model of schema
+var Timestamp = mongoose.model("Timestamp", timestampSchema);
 var Video = mongoose.model("Video", videoSchema);
-Video.deleteMany({ video_name: 'File Name: Testing123' }, function (err) {
+
+Video.deleteMany({}, function (err) {
+  if (err) return handleError(err);
+  // deleted at most one tank document
+});
+
+Timestamp.deleteMany({}, function (err) {
   if (err) return handleError(err);
   // deleted at most one tank document
 });
 
 
-
-// //adding video to model
-Video.create({
-  video_name: "File Name: Testing123",
-	file_path: "File Path: http:/local/temp.img",
-	sus_objects:[{
-            name: "Gun",
-            values: {
-                "value1": "...",
-                "value2": "..."
-            }
-        },
-        {
-            name: "Knife",
-            values: {
-                "value3": "..."
-            }
-        },
-        {
-            name: "Mask",
-            values: {
-                "value4": "...",
-                "value5": "..."
-            }
-        }]
-}, function(err, vid) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log("Successfully added: ");
-    console.log(vid);
-  }
-});
-
-
-Video.find({}, function(err, vids) {
-    if(err) {
-        console.log("OH NO, ERROR");
-        console.log(err);
-    } else {
-				vids.forEach(function(doc, index) {
-					console.log(index + " key: " + doc.uid)
-			});
-
-        console.log("ALL THE Videos.....");
-        console.log(vids);
-    }
-});
-
-
-
 //landing page
 app.get('/', function(req, res) {
-  // res.render('../client/views/index');
-	res.sendFile(__dirname + '/computerVision.html');
-  // res.send('this will be the landing page');
+	Video.find({}, function(err, vids) {
+	    if(err) {
+	        console.log("OH NO, ERROR");
+	        console.log(err);
+	    } else {
+        console.log("All the videos...");
+				var videos = vids.map(function(model) {
+					return model.toObject();
+				});
+				console.log(videos);
+				res.render('../client/views/index',{videos:videos});
+	    }
+	});
+	// res.sendFile('/computerVision.html');
+
+});
+
+
+app.get('/analysis', function(req, res) {
+	Timestamp.find({video_name: 'Testing123566'}, function(err, vids) {
+	    if(err) {
+	        console.log("OH NO, ERROR");
+	        console.log(err);
+	    } else {
+        console.log("All the timestamps...");
+				var timestamps = vids.map(function(model) {
+					return model.toObject();
+				});
+				console.log(timestamps);
+				res.render('../client/views/analysis',{timestamps:timestamps});
+	    }
+	});
 
 });
