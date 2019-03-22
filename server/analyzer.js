@@ -6,9 +6,6 @@ exports.analyze = function() {
   // Use python shell
   const {PythonShell} = require("python-shell");
   var pyshell = new PythonShell(myPythonScriptPath);
-
-
-
   module.exports = {
     analyze: function (dirname) {
       pyshell.on('message', function (message) {

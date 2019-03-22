@@ -1,6 +1,7 @@
 import requests
 import sys
 import time
+import math
 # If you are using a Jupyter notebook, uncomment the following line.
 #%matplotlib inline
 # import matplotlib.pyplot as plt
@@ -23,7 +24,10 @@ vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0
 analyze_url = vision_base_url + "analyze"
 
 # Set image_path to the local path of an image that you want to analyze.
-image_path = "./server/images/out1.png"
+image_name = "2.png"
+
+image_path = "../client/img/" + image_name
+
 print(image_path)
 # Read the image into a byte array
 image_data = open(image_path, "rb").read()
@@ -37,6 +41,18 @@ response.raise_for_status()
 # The 'analysis' object contains various fields that describe the image. The most
 # relevant caption for the image is obtained from the 'description' property.
 analysis = response.json()
+video_name = {'video_name': 'Robber'}
+file_path = {'file_path': './client/img/' + image_name}
+minute = {'min': math.floor((int(image_name[0: len(image_name) - 4]) * 5) / 60)}
+second = {'sec': (int(image_name[0: len(image_name) - 4]) * 5) % 60}
+
+
+analysis.update(video_name)
+analysis.update(file_path)
+analysis.update(minute)
+analysis.update(second)
+
+
 print(analysis)
 image_caption = analysis["description"]["captions"][0]["text"].capitalize()
 #
