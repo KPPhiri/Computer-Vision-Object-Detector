@@ -9,21 +9,25 @@ var pyshell = new PythonShell(myPythonScriptPath);
 
 module.exports = {
   analyze: function (dirname) {
-    var options = {
-      mode: 'text',
-      pythonPath: './Python/Python37-32/python.exe',
-      pythonOptions: ['-u'],
-      scriptPath: './server/',
-      args: ['value1', 'value2', 'value3']
-    };
+    pyshell.on('message', function (message) {
+        // received a message sent from the Python script (a simple "print" statement)
+        console.log(message);
+    });
 
-    PythonShell.run('analyze-local-image.py', options, function (err, results) {
-      if (err) 
-        throw err;
-      // Results is an array consisting of messages collected during execution
-      console.log('results: %j', results);
+    // end the input stream and allow the process to exit
+    pyshell.end(function (err) {
+        if (err){
+            throw err;
+        };
+
+        console.log('finished');
     });
   }
 };
 
-
+function sleep(time) {
+    var stop = new Date().getTime();
+    while(new Date().getTime() < stop + time) {
+        ;
+    }
+}
