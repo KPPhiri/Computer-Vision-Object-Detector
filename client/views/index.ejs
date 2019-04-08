@@ -1,17 +1,88 @@
 <!DOCTYPE html>
+<title>Intelligent Hawkeyes: Surveillance Home Page</title>
+
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <style>
+section {
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.info {
+  display: inline-block;
+}
+.nav_header_font {
+  font-family: "Arial", Times, serif;
+  font-size: 20px;
+  color: #696969;
+
+}
+
+.info_font{
+  font-family: "Helvetica", Times, serif;
+}
+
+.status_info_font {
+  font-family: "Helvetica", Times, serif;
+  /* font-weight: bold; */
+}
+
+.welc_info_font {
+  font-family: "Helvetica", Times, serif;
+  font-size: 40px;
+}
+
+.welc_name_info_font {
+  font-family: "Helvetica", Times, serif;
+  font-size: 20px;
+  color: #808080;
+}
+
+.status_info_font {
+  font-family: "Helvetica", Times, serif;
+  /* font-weight: bold; */
+  color: #696969;
+}
+
+.desc_info_font {
+  font-family: "Helvetica", Times, serif;
+  /* font-weight: bold; */
+  color: #696969;
+}
+
+
+
+#user_sec {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+  border: 2px solid #DCDCDC;
+}
+
+#video_sec {
+  padding: 20px;
+  margin-top: 10px;
+  border: 2px solid #DCDCDC;
+  height: 350px;
+}
+
 div.gallery {
-  border: 1px solid #ccc;
+  /* border: 4px solid #ccc; */
+  border: 4px solid #black;
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  /* border: 1px solid #777; */
+  border: 4px solid #D3D3D3;
 }
 
 div.gallery img {
@@ -22,7 +93,9 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+  /* font-size: 15px; */
 }
+
 
 * {
   box-sizing: border-box;
@@ -55,33 +128,58 @@ div.desc {
 </style>
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand">Intelligent Hawkeyes</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Home</a></li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav_header_font" href="#">Intelligent Hawkeyes</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <form action='/' method= 'GET'>
+            <button name="action" class="btn btn-sm btn-outline-secondary">Home</button>
+        </form>
+      </span>
     </div>
   </nav>
 
-<h1>Welcome</h1>
-<h4>Choose a video to analyze</h4>
-
-<% videos.forEach(function(video) {%>
-  <div class="responsive">
-    <div class="gallery">
-      <form action='/analysis' method= 'GET'>
-          <button name="action" value="blue"><img src="<%= video.thumbnail_path %>" alt="blue" width="300" height="300"></button>
-      </form>
-      <div class="desc"><%= video.video_name %>: <%= video.date %></div>
+<section>
+  <div id="user_sec" class="info_font">
+    <span class="welc_info_font">Welcome</span>
+    <span class="welc_name_info_font">Jon Doe</span>
+    <div></div>
+    <div class="info"><img src = "./img/avatar.png" height="200" width="200"></div>
+    <div class="info">
+        <div class="status_info_font">Status: </div>
+        <div class="status_info_font">Alerted Videos: </div>
+        <div class="status_info_font">Alerted Objects: </div>
     </div>
   </div>
 
-<% }); %>
+  <hr align="left" width="100%">
+
+  <div id="video_sec">
+    <h4 class="info_font">Choose a video to analyze</h4>
+    <% videos.forEach(function(video) {%>
+      <div class="responsive">
+        <div class="gallery">
+          <form action='/analysis' method= 'GET'>
+              <button name="action" value="blue"><img src="<%= video.thumbnail_path %>" alt="blue" width="300" height="300"></button>
+          </form>
+          <div class="desc desc_info_font"><%= video.video_name %>: <%= video.date %></div>
+        </div>
+      </div>
+
+    <% }); %>
+  </div>
+</section>
 
 
 <!--
