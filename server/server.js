@@ -65,6 +65,7 @@ Timestamp.deleteMany({}, function (err) {
 //
 //
 // //python script
+/*
 const {PythonShell} = require("python-shell");
 var pyshell = new PythonShell(myPythonScriptPath);
 
@@ -72,7 +73,7 @@ var output = "";
 pyshell.on('message', function (message) {
 	 // received a message sent from the Python script (a simple "print" statement)
 	 output = message;
-	 // console.log("!!! testing: " + message);
+	 console.log("!!! testing: " + message);
 
 });
 
@@ -88,6 +89,7 @@ pyshell.end(function (err) {
 
 
 
+*/
 
 
 
@@ -147,4 +149,175 @@ app.get('/analysis', function(req, res) {
 	    }
 	});
 
+});
+
+
+var arr =["mask", "gun", "knife"];
+
+Video.create({
+	video_name: 'Backk Home Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	date: '03/01/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+
+Video.create({
+	video_name: 'Back Home Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	date: '09/01/2018'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Front Home Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	date: '03/01/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Garage Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	date: '01/01/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Store Camera',
+  file_path: 'testing1111',
+	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	// thumbnail_path: '/img/Shaki_waterfall.jpg',
+	date: '02/21/2019'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+
+
+
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "dragon1231232133",
+min: 5,
+sec: 3,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+		// console.log("ADDING NEW")
+		// console.log(vid);
+}
+});
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "a[[;es1231232133",
+min: 1,
+sec: 43,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+		// console.log("ADDING NEW")
+		// console.log(vid);
+}
+});
+
+Timestamp.create({
+video_name: 'Testing123566',
+file_path: "localdir//:s1231232133",
+min: 8,
+sec: 9,
+sus_objects: arr
+}, function(err, vid) {
+if(err) {
+		console.log(err);
+} else {
+}
+});
+
+	Timestamp.create({
+		video_name: 'Testing123566',
+		file_path: "testing1231232133",
+		min: 9,
+		sec: 2,
+		sus_objects: arr
+	}, function(err, vid) {
+    if(err) {
+        console.log(err);
+    } else {
+        // console.log("ADDING NEW")
+        // console.log(vid);
+    }
+});
+
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "dragon1231232133",
+	min: 5,
+	sec: 3,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+			// console.log("ADDING NEW")
+			// console.log(vid);
+	}
+});
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "a[[;es1231232133",
+	min: 1,
+	sec: 43,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+			// console.log("ADDING NEW")
+			// console.log(vid);
+	}
+});
+
+Timestamp.create({
+	video_name: 'Testing123566',
+	file_path: "localdir//:s1231232133",
+	min: 8,
+	sec: 9,
+	sus_objects: arr
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
 });
