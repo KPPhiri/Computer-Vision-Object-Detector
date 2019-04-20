@@ -73,11 +73,11 @@
 <div class="row content">
   <div id="video_border" class="col-sm-8 text-left">
       <video id="myVideo" width="850" height="550" controls>
-          <source src="test.mp4" type="video/mp4">
+          <source src="<%=vid.file_path%>" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-    <!-- <iframe src="test.mp4" width="850" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-    <div id="video_name">Path: <%=timestamps[0].video_name %></div>
+    <div id="video_name">Name: <%=timestamps[0].video_name %></div>
+    <div id="video_name">Path: <%=vid.file_path%></div>
   </div>
 
   <div id="timestamp_border" class="col-sm-2 sidenav">
