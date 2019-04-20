@@ -1,0 +1,41 @@
+Video 1 timestamp in 3's
+
+['indoor', 'table', 'desk', 'office', 'refrigerator', 'computer', 'cluttered', 'covered', 'sitting', 'man', 'filled', 'different', 'various', 'toy', 'food', 'truck', 'young', 'counter', 'several', 'kitchen', 'many', 'standing', 'room', 'group', 'snow', 'white', 'laying', 'people']
+['indoor', 'table', 'person', 'computer', 'office', 'desk', 'refrigerator', 'sitting', 'man', 'cluttered', 'laptop', 'young', 'covered', 'paper', 'food', 'filled', 'kitchen', 'group', 'black', 'counter', 'woman', 'keyboard', 'many', 'standing', 'room', 'people', 'desktop', 'store', 'snow', 'white']
+['indoor', 'table', 'desk', 'office', 'photo', 'computer', 'covered', 'different', 'snow', 'skiing', 'food', 'cluttered', 'sitting', 'various', 'young', 'filled', 'standing', 'man', 'refrigerator', 'many', 'woman', 'group', 'people', 'room']
+['indoor', 'table', 'desk', 'office', 'computer', 'cluttered', 'man', 'covered', 'sitting', 'filled', 'food', 'refrigerator', 'young', 'standing', 'laying', 'black', 'laptop', 'snow', 'woman', 'group', 'keyboard', 'room', 'birthday', 'people', 'kitchen', 'bed', 'playing']
+['indoor', 'toy', 'table', 'covered', 'refrigerator', 'man', 'snow', 'skiing', 'filled', 'sitting', 'standing', 'young', 'different', 'desk', 'black', 'computer', 'woman', 'holding', 'group', 'people', 'laying']
+['indoor', 'table', 'toy', 'desk', 'covered', 'office', 'food', 'different', 'counter', 'items', 'various', 'computer', 'sitting', 'man', 'filled', 'cluttered', 'refrigerator', 'snow', 'skiing', 'young', 'birthday', 'kitchen', 'standing', 'store', 'group', 'room']
+['indoor', 'table', 'office', 'refrigerator', 'desk', 'sitting', 'items', 'cluttered', 'equipment', 'filled', 'covered', 'food', 'different', 'various', 'counter', 'computer', 'kitchen', 'young', 'man', 'standing', 'many', 'room', 'snow', 'group', 'skiing', 'laying']
+['indoor', 'table', 'refrigerator', 'sitting', 'items', 'office', 'cluttered', 'equipment', 'desk', 'food', 'man', 'filled', 'computer', 'truck', 'covered', 'standing', 'counter', 'black', 'kitchen', 'different', 'skiing', 'large', 'young', 'holding', 'woman', 'snow', 'room', 'board', 'group']
+['indoor', 'table', 'food', 'items', 'equipment', 'office', 'sitting', 'box', 'desk', 'skiing', 'filled', 'covered', 'standing', 'man', 'truck', 'snow', 'computer', 'different', 'toy', 'counter', 'refrigerator', 'young', 'holding', 'kitchen', 'large', 'board', 'woman', 'group', 'display', 'room', 'people']
+['indoor', 'table', 'desk', 'equipment', 'sitting', 'office', 'skiing', 'computer', 'food', 'standing', 'covered', 'snow', 'board', 'counter', 'man', 'black', 'refrigerator', 'young', 'kitchen', 'holding', 'group', 'display', 'people', 'room']
+
+
+Video 2 timestamp in 3's
+
+['boat']
+['sitting', 'table', 'glass', 'computer', 'room', 'laying']
+['table', 'computer']
+['table', 'window', 'sitting', 'desk', 'computer', 'hanging', 'keyboard', 'clock', 'mirror', 'white', 'man']
+['sitting', 'table', 'building', 'glass', 'room', 'store', 'display']
+['indoor', 'table', 'glass', 'sitting', 'large', 'white', 'display', 'clear', 'statue', 'cake', 'man', 'room', 'standing', 'plate']
+['table']
+['building', 'room']
+['indoor', 'table', 'sitting', 'window', 'room', 'large', 'covered', 'man', 'glass', 'living', 'shop', 'standing', 'display', 'store', 'white', 'people']
+['indoor', 'table', 'sitting', 'computer', 'desk', 'laptop', 'piano', 'keyboard', 'pair', 'wooden', 'man', 'cutting', 'large', 'board', 'boat', 'mouse', 'room', 'white']
+
+Video 3 timestamp in 3's
+['sitting', 'black', 'white', 'standing', 'room', 'man']
+['person', 'man', 'young', 'board', 'building', 'riding', 'doing', 'standing', 'umbrella']
+['sitting', 'black', 'street', 'refrigerator', 'computer', 'white', 'cat', 'room', 'standing']
+['sitting', 'black', 'street', 'white', 'cat', 'room', 'refrigerator', 'fire', 'sign']
+['person', 'young', 'building', 'boy', 'man', 'little', 'standing']
+['man', 'wearing', 'hat', 'standing', 'holding', 'room']
+['young', 'standing', 'small', 'man', 'little', 'sitting', 'holding', 'wearing', 'black', 'woman', 'board', 'girl', 'room', 'white']
+
+Video 4 timestamp in 3's
+['building', 'table', 'sitting', 'man', 'snow', 'large', 'riding', 'room', 'fire', 'driving', 'street', 'stop', 'train', 'smoke', 'bus', 'standing']
+
+
+
