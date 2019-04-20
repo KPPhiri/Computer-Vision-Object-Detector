@@ -87,10 +87,7 @@ pyshell.end(function (err) {
 	 console.log('finished');
 });
 
-
-
 */
-
 
 
 //adding to database
@@ -134,31 +131,169 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/analysis', function(req, res) {
-	Timestamp.find({video_name: 'Testing123566'}, function(err, vids) {
+app.get('/03/01/2018', function(req, res) {
+	Timestamp.find({video_name: 'Testing123566'}, function(err, tvids) {
 	    if(err) {
 	        console.log("OH NO, ERROR");
 	        console.log(err);
 	    } else {
-        console.log("All the timestamps...");
-				var timestamps = vids.map(function(model) {
+        // console.log("All the timestamps...");
+				var timestamps = tvids.map(function(model) {
 					return model.toObject();
 				});
-				console.log(timestamps);
-				res.render('../client/views/analysis',{timestamps:timestamps});
+				// console.log(timestamps);
+
+
+				Video.find({video_name: 'Back Home Camera'}, function(err, vids) {
+				    if(err) {
+				        console.log("OH NO, ERROR");
+				        console.log(err);
+				    } else {
+			        // console.log("All the timestamps...");
+							var vid = vids.map(function(model) {
+								return model.toObject();
+							});
+							vid = vid[0];
+							console.log("VIDEO IS: ", vid);
+							console.log(vid);
+							res.render('../client/views/analysis',{vid:vid, timestamps:timestamps});
+				    }
+				});
 	    }
 	});
-
 });
+
+
+app.get('/05/01/2018', function(req, res) {
+	Timestamp.find({video_name: 'Testing123566'}, function(err, tvids) {
+	    if(err) {
+	        console.log("OH NO, ERROR");
+	        console.log(err);
+	    } else {
+        // console.log("All the timestamps...");
+				var timestamps = tvids.map(function(model) {
+					return model.toObject();
+				});
+				// console.log(timestamps);
+
+
+				Video.find({video_name: 'Store Camera'}, function(err, vids) {
+				    if(err) {
+				        console.log("OH NO, ERROR");
+				        console.log(err);
+				    } else {
+			        // console.log("All the timestamps...");
+							var vid = vids.map(function(model) {
+								return model.toObject();
+							});
+							vid = vid[0];
+							console.log("VIDEO IS: ", vid);
+							console.log(vid);
+							res.render('../client/views/analysis',{vid:vid, timestamps:timestamps});
+				    }
+				});
+	    }
+	});
+});
+
+app.get('/09/01/2018', function(req, res) {
+	Timestamp.find({video_name: 'Testing123566'}, function(err, tvids) {
+	    if(err) {
+	        console.log("OH NO, ERROR");
+	        console.log(err);
+	    } else {
+        // console.log("All the timestamps...");
+				var timestamps = tvids.map(function(model) {
+					return model.toObject();
+				});
+				// console.log(timestamps);
+
+
+				Video.find({video_name: 'Jewely Store Front Camera'}, function(err, vids) {
+				    if(err) {
+				        console.log("OH NO, ERROR");
+				        console.log(err);
+				    } else {
+			        // console.log("All the timestamps...");
+							var vid = vids.map(function(model) {
+								return model.toObject();
+							});
+							vid = vid[0];
+							console.log("VIDEO IS: ", vid);
+							console.log(vid);
+							res.render('../client/views/analysis',{vid:vid, timestamps:timestamps});
+				    }
+				});
+	    }
+	});
+});
+
+
+
+
+
+
+app.get('/01/01/2019', function(req, res) {
+	Timestamp.find({video_name: 'Testing123566'}, function(err, tvids) {
+	    if(err) {
+	        console.log("OH NO, ERROR");
+	        console.log(err);
+	    } else {
+        // console.log("All the timestamps...");
+				var timestamps = tvids.map(function(model) {
+					return model.toObject();
+				});
+				// console.log(timestamps);
+
+
+				Video.find({video_name: 'Porch Front Camera'}, function(err, vids) {
+				    if(err) {
+				        console.log("OH NO, ERROR");
+				        console.log(err);
+				    } else {
+			        // console.log("All the timestamps...");
+							var vid = vids.map(function(model) {
+								return model.toObject();
+							});
+							vid = vid[0];
+							console.log("VIDEO IS: ", vid);
+							console.log(vid);
+							res.render('../client/views/analysis',{vid:vid, timestamps:timestamps});
+				    }
+				});
+	    }
+	});
+});
+
+//
+// app.get('/analysis', function(req, res) {
+// 	Timestamp.find({video_name: 'Testing123566'}, function(err, vids) {
+// 	    if(err) {
+// 	        console.log("OH NO, ERROR");
+// 	        console.log(err);
+// 	    } else {
+//         console.log("All the timestamps...");
+// 				var timestamps = vids.map(function(model) {
+// 					return model.toObject();
+// 				});
+// 				console.log(timestamps);
+// 				res.render('../client/views/analysis',{timestamps:timestamps});
+// 	    }
+// 	});
+//
+// });
+
+
+
 
 
 var arr =["mask", "gun", "knife"];
 
 Video.create({
-	video_name: 'Backk Home Camera',
-  file_path: 'testing1111',
-	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
-	date: '03/01/2019'
+	video_name: 'Back Home Camera',
+  file_path: '/vid/vid1.mp4',
+	thumbnail_path: './img/thumbnail1.png',
+	date: '03/01/2018'
 	}, function(err, vid) {
 	if(err) {
 			console.log(err);
@@ -168,9 +303,21 @@ Video.create({
 
 
 Video.create({
-	video_name: 'Back Home Camera',
-  file_path: 'testing1111',
-	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	video_name: 'Store Camera',
+  file_path: '/vid/vid2.mp4',
+	thumbnail_path: './img/thumbnail2.png',
+	date: '05/01/2018'
+	}, function(err, vid) {
+	if(err) {
+			console.log(err);
+	} else {
+	}
+});
+
+Video.create({
+	video_name: 'Jewely Store Front Camera',
+  file_path: '/vid/vid3.mp4',
+	thumbnail_path: './img/thumbnail3.png',
 	date: '09/01/2018'
 	}, function(err, vid) {
 	if(err) {
@@ -180,21 +327,9 @@ Video.create({
 });
 
 Video.create({
-	video_name: 'Front Home Camera',
-  file_path: 'testing1111',
-	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
-	date: '03/01/2019'
-	}, function(err, vid) {
-	if(err) {
-			console.log(err);
-	} else {
-	}
-});
-
-Video.create({
-	video_name: 'Garage Camera',
-  file_path: 'testing1111',
-	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
+	video_name: 'Porch Front Camera',
+  file_path: '/vid/vid4.mp4',
+	thumbnail_path: './img/thumbnail4.png',
 	date: '01/01/2019'
 	}, function(err, vid) {
 	if(err) {
@@ -202,21 +337,6 @@ Video.create({
 	} else {
 	}
 });
-
-Video.create({
-	video_name: 'Store Camera',
-  file_path: 'testing1111',
-	thumbnail_path: 'https://images.tmz.com/2018/09/28/092818-xxx-murder-video-kal-v2-1080x608.jpg',
-	// thumbnail_path: '/img/Shaki_waterfall.jpg',
-	date: '02/21/2019'
-	}, function(err, vid) {
-	if(err) {
-			console.log(err);
-	} else {
-	}
-});
-
-
 
 
 

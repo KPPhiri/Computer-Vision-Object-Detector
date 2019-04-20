@@ -170,7 +170,7 @@ div.desc {
     <% videos.forEach(function(video) {%>
       <div class="responsive">
         <div class="gallery">
-          <form action='/analysis' method= 'GET'>
+          <form action='/<%=video.date%>' method= 'GET'>
               <button name="action" value="blue"><img src="<%= video.thumbnail_path %>" alt="blue" width="300" height="300"></button>
           </form>
           <div class="desc desc_info_font"><%= video.video_name %>: <%= video.date %></div>
