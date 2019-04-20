@@ -1,38 +1,90 @@
-<title>Bootstrap Example</title>
+<title>Intelligent Hawkeyes: Video Analysis</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+<style>
+.nav_header_font {
+  font-family: "Arial", Times, serif;
+  font-size: 20px;
+  color: #696969;
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Video Analysis Page</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Home</a></li>
-      </ul>
-    </div>
+}
+
+#video_border {
+  border: 2px solid #DCDCDC;
+  padding: 10px;
+  margin: 10px;
+}
+
+#video_name {
+  font-family: "Arial", Times, serif;
+  text-align: center;
+  font-size: 20px;
+  color: #696969;
+}
+
+#timestamp_border {
+  border: 2px solid #DCDCDC;
+  padding: 10px;
+  margin: 10px;
+  width: 600px:
+}
+
+
+.well {
+  border: 2px solid #DCDCDC;
+  margin: 5px;
+}
+
+.time_stamp_font {
+  font-family: "Helvetica", Times, serif;
+  font-size: 13px;
+  color: #808080;
+}
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="nav_header_font" href="#">Intelligent Hawkeyes</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      </li>
+      <li class="nav-item">
+      </li>
+      <li class="nav-item">
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <form action='/' method= 'GET'>
+          <button name="action" class="btn btn-sm btn-outline-secondary">Home</button>
+      </form>
+    </span>
   </div>
 </nav>
 
 <div class="container-fluid text-center">
 <div class="row content">
-  <div class="col-sm-8 text-left">
+  <div id="video_border" class="col-sm-8 text-left">
     <iframe src="test.mp4" width="850" height="550" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div id="video_name">Path: <%=timestamps[0].video_name %></div>
   </div>
-  <div class="col-sm-2 sidenav">
+
+  <div id="timestamp_border" class="col-sm-2 sidenav">
     <h6>Timestamps</h6>
-    <div  style="max-height: 600;overflow-y: scroll;"> 
+    <div style="max-height: 600;overflow-y: scroll;">
       <% timestamps.forEach(function(timestamp) {%>
         <div class="well">
-          <p>Path: <%=timestamp.file_path %></p>
-          <p>Hour: <%=timestamp.min %></p>
-          <p>min: <%=timestamp.sec %></p>
-          <p>Objects: <%=timestamp.sus_objects %></p>
+          <p class="time_stamp_font">Path: <%=timestamp.file_path %></p>
+          <p class="time_stamp_font">Hour: <%=timestamp.min %></p>
+          <p class="time_stamp_font">min: <%=timestamp.sec %></p>
+          <p class="time_stamp_font">Objects: <%=timestamp.sus_objects %></p>
         </div>
       <% }); %>
     <div>

@@ -4,8 +4,8 @@ import time
 import math
 # If you are using a Jupyter notebook, uncomment the following line.
 #%matplotlib inline
-import matplotlib.pyplot as plt
-from PIL import Image
+# import matplotlib.pyplot as plt
+# from PIL import Image
 from io import BytesIO
 
 # Replace <Subscription Key> with your valid subscription key.
@@ -26,7 +26,7 @@ analyze_url = vision_base_url + "analyze"
 # Set image_path to the local path of an image that you want to analyze.
 image_name = "2.png"
 
-image_path = "../client/img/" + image_name
+image_path = "./client/img/" + image_name
 
 print(image_path)
 # Read the image into a byte array
@@ -41,6 +41,8 @@ response.raise_for_status()
 # The 'analysis' object contains various fields that describe the image. The most
 # relevant caption for the image is obtained from the 'description' property.
 analysis = response.json()
+print("ANALSIS JSON: ", analysis);
+analysis = analysis['description']
 video_name = {'video_name': 'Robber'}
 file_path = {'file_path': './client/img/' + image_name}
 minute = {'min': math.floor((int(image_name[0: len(image_name) - 4]) * 5) / 60)}
@@ -54,13 +56,13 @@ analysis.update(second)
 
 
 print(analysis)
-image_caption = analysis["description"]["captions"][0]["text"].capitalize()
-
-# Display the image and overlay it with the caption.
-image = Image.open(BytesIO(image_data))
-plt.imshow(image)
-plt.axis("off")
-_ = plt.title(image_caption, size="x-large", y=-0.1)
+# image_caption = analysis["description"]["captions"][0]["text"].capitalize()
+#
+# # Display the image and overlay it with the caption.
+# image = Image.open(BytesIO(image_data))
+# # plt.imshow(image)
+# # plt.axis("off")
+# # _ = plt.title(image_caption, size="x-large", y=-0.1)
 
 ##print(response)
 sys.stdout.flush()
