@@ -1,3 +1,5 @@
+['gun', 'fire', 'cutting', 'glass', 'hat']
+
 Video 1 timestamp in 3's
 
 ['indoor', 'table', 'desk', 'office', 'refrigerator', 'computer', 'cluttered', 'covered', 'sitting', 'man', 'filled', 'different', 'various', 'toy', 'food', 'truck', 'young', 'counter', 'several', 'kitchen', 'many', 'standing', 'room', 'group', 'snow', 'white', 'laying', 'people']
@@ -7,9 +9,9 @@ Video 1 timestamp in 3's
 ['indoor', 'toy', 'table', 'covered', 'refrigerator', 'man', 'snow', 'skiing', 'filled', 'sitting', 'standing', 'young', 'different', 'desk', 'black', 'computer', 'woman', 'holding', 'group', 'people', 'laying']
 ['indoor', 'table', 'toy', 'desk', 'covered', 'office', 'food', 'different', 'counter', 'items', 'various', 'computer', 'sitting', 'man', 'filled', 'cluttered', 'refrigerator', 'snow', 'skiing', 'young', 'birthday', 'kitchen', 'standing', 'store', 'group', 'room']
 ['indoor', 'table', 'office', 'refrigerator', 'desk', 'sitting', 'items', 'cluttered', 'equipment', 'filled', 'covered', 'food', 'different', 'various', 'counter', 'computer', 'kitchen', 'young', 'man', 'standing', 'many', 'room', 'snow', 'group', 'skiing', 'laying']
-['indoor', 'table', 'refrigerator', 'sitting', 'items', 'office', 'cluttered', 'equipment', 'desk', 'food', 'man', 'filled', 'computer', 'truck', 'covered', 'standing', 'counter', 'black', 'kitchen', 'different', 'skiing', 'large', 'young', 'holding', 'woman', 'snow', 'room', 'board', 'group']
-['indoor', 'table', 'food', 'items', 'equipment', 'office', 'sitting', 'box', 'desk', 'skiing', 'filled', 'covered', 'standing', 'man', 'truck', 'snow', 'computer', 'different', 'toy', 'counter', 'refrigerator', 'young', 'holding', 'kitchen', 'large', 'board', 'woman', 'group', 'display', 'room', 'people']
-['indoor', 'table', 'desk', 'equipment', 'sitting', 'office', 'skiing', 'computer', 'food', 'standing', 'covered', 'snow', 'board', 'counter', 'man', 'black', 'refrigerator', 'young', 'kitchen', 'holding', 'group', 'display', 'people', 'room']
+['indoor', 'table', 'refrigerator', 'sitting', 'items', 'office', 'gun', 'cluttered', 'equipment', 'desk', 'food', 'man', 'filled', 'computer', 'truck', 'covered', 'standing', 'counter', 'black', 'kitchen', 'different', 'skiing', 'large', 'young', 'holding', 'woman', 'snow', 'room', 'board', 'group']
+['indoor', 'table', 'food', 'items', 'equipment', 'office', 'sitting', 'box', 'gun', 'desk', 'skiing', 'filled', 'covered', 'standing', 'man', 'truck', 'snow', 'computer', 'different', 'toy', 'counter', 'refrigerator', 'young', 'holding', 'kitchen', 'large', 'board', 'woman', 'group', 'display', 'room', 'people']
+['indoor', 'table', 'desk', 'equipment', 'sitting', 'office', 'cap', 'skiing', 'computer', 'food', 'standing', 'covered', 'snow', 'board', 'counter', 'man', 'black', 'refrigerator', 'young', 'kitchen', 'holding', 'group', 'display', 'people', 'room']
 
 
 Video 2 timestamp in 3's
@@ -27,16 +29,16 @@ Video 2 timestamp in 3's
 
 Video 3 timestamp in 3's
 ['sitting', 'black', 'white', 'standing', 'room', 'man']
-['person', 'man', 'young', 'board', 'building', 'riding', 'doing', 'standing', 'umbrella']
+['person', 'man', 'young', 'board', 'building', 'cap', 'gun', 'riding', 'doing', 'standing', 'umbrella']
 ['sitting', 'black', 'street', 'refrigerator', 'computer', 'white', 'cat', 'room', 'standing']
 ['sitting', 'black', 'street', 'white', 'cat', 'room', 'refrigerator', 'fire', 'sign']
 ['person', 'young', 'building', 'boy', 'man', 'little', 'standing']
 ['man', 'wearing', 'hat', 'standing', 'holding', 'room']
-['young', 'standing', 'small', 'man', 'little', 'sitting', 'holding', 'wearing', 'black', 'woman', 'board', 'girl', 'room', 'white']
+['young', 'standing', 'small', 'man', 'gun', 'little', 'sitting', 'holding', 'wearing', 'black', 'woman', 'board', 'girl', 'room', 'white']
 
 Video 4 timestamp in 3's
 ['building', 'table', 'sitting', 'man', 'snow', 'large', 'riding', 'room', 'fire', 'driving', 'street', 'stop', 'train', 'smoke', 'bus', 'standing']
-['building', 'indoor', 'sitting', 'man', 'front', 'table', 'standing', 'mirror', 'room', 'white']
+['building', 'indoor', 'sitting', 'man', 'front', 'gun', 'table', 'standing', 'mirror', 'room', 'white']
 ['indoor', 'building', 'sitting', 'large', 'mirror', 'man', 'room', 'table', 'fire', 'white', 'fireplace', 'snow']
 ['indoor', 'building', 'sitting', 'large', 'fire', 'room', 'table', 'man', 'old', 'white', 'mirror', 'oven', 'kitchen', 'snow', 'sink', 'engine']
 ['building', 'indoor', 'sitting', 'large', 'mirror', 'bridge', 'fire', 'brick', 'table', 'man', 'room', 'old', 'snow', 'white']
@@ -54,19 +56,19 @@ Video 5 timestamp in 3's
 ['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'white', 'furniture', 'large', 'sitting', 'bedroom', 'screen', 'mirror', 'filled', 'water', 'bed', 'refrigerator']
 ['indoor', 'room', 'living', 'window', 'television', 'view', 'table', 'furniture', 'screen', 'large', 'white', 'mirror', 'sitting', 'bedroom', 'filled', 'water', 'door', 'refrigerator', 'bed']
 ['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'furniture', 'white', 'large', 'sitting', 'screen', 'bedroom', 'mirror', 'filled', 'water', 'door', 'refrigerator', 'bed']
-['indoor', 'room', 'living', 'window', 'table', 'television', 'view', 'furniture', 'large', 'mirror', 'sitting', 'screen', 'white', 'bedroom', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat']
-['indoor', 'room', 'window', 'living', 'table', 'television', 'view', 'mirror', 'photo', 'furniture', 'large', 'sitting', 'screen', 'box', 'white', 'bedroom', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat']
-['indoor', 'room', 'living', 'window', 'table', 'television', 'view', 'furniture', 'large', 'sitting', 'white', 'mirror', 'bedroom', 'screen', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat', 'standing']
+['indoor', 'room', 'living', 'window', 'table', 'television', 'view', 'furniture', 'large', 'mirror', 'fire, 'sitting', 'screen', 'white', 'bedroom', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat']
+['indoor', 'room', 'window', 'living', 'table', 'television', 'view', 'mirror', 'photo', 'fire', 'furniture', 'large', 'sitting', 'screen', 'box', 'white', 'bedroom', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat']
+['indoor', 'room', 'living', 'window', 'table', 'television', 'view', 'furniture', 'large', 'sitting', 'white', 'mirror', 'fire', 'bedroom', 'screen', 'filled', 'monitor', 'water', 'refrigerator', 'bed', 'boat', 'standing']
 ['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'furniture', 'large', 'screen', 'sitting', 'white', 'monitor', 'bedroom', 'mirror', 'water', 'refrigerator', 'bed', 'boat']
-['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'mirror', 'large', 'screen', 'white', 'sitting', 'furniture', 'monitor', 'filled', 'bedroom', 'bed', 'water', 'refrigerator']
-['indoor', 'room', 'living', 'window', 'view', 'television', 'table', 'mirror', 'furniture', 'sitting', 'screen', 'large', 'white', 'filled', 'monitor', 'bedroom', 'refrigerator', 'water', 'bed', 'boat']
+['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'mirror', 'large', 'screen', 'fire', 'white', 'sitting', 'furniture', 'monitor', 'filled', 'bedroom', 'bed', 'water', 'refrigerator']
+['indoor', 'room', 'living', 'window', 'view', 'television', 'table', 'mirror', 'fire', 'furniture', 'sitting', 'screen', 'large', 'white', 'filled', 'monitor', 'bedroom', 'refrigerator', 'water', 'bed', 'boat']
 ['indoor', 'room', 'window', 'living', 'view', 'television', 'table', 'mirror', 'photo', 'monitor', 'large', 'screen', 'white', 'sitting', 'furniture', 'bedroom', 'filled', 'refrigerator', 'water', 'bed']
 ['indoor', 'room', 'living', 'television', 'mirror', 'table', 'screen', 'large', 'white', 'monitor', 'furniture', 'bed', 'refrigerator', 'bedroom', 'standing', 'man']
-['indoor', 'room', 'living', 'window', 'view', 'television', 'table', 'monitor', 'furniture', 'mirror', 'screen', 'white', 'filled', 'large', 'bedroom', 'water', 'refrigerator', 'boat', 'man', 'bed', 'bus']
-['indoor', 'room', 'view', 'car', 'sitting', 'photo', 'television', 'mirror', 'living', 'monitor', 'table', 'white', 'filled', 'bedroom', 'furniture', 'refrigerator', 'bus', 'seat', 'screen', 'large', 'water', 'bed', 'boat', 'man', 'cat', 'plane']
-['indoor', 'photo', 'television', 'window', 'mirror', 'view', 'room', 'monitor', 'sitting', 'screen', 'table', 'man', 'living', 'white', 'water', 'bedroom', 'seat', 'large', 'boat', 'holding', 'bus', 'phone', 'bed', 'standing']
-['indoor', 'room', 'living', 'window', 'television', 'table', 'monitor', 'view', 'photo', 'sitting', 'white', 'furniture', 'screen', 'mirror', 'filled', 'bedroom', 'refrigerator', 'large', 'water', 'man', 'bed', 'boat', 'standing', 'bus']
-['indoor', 'room', 'window', 'living', 'table', 'television', 'view', 'photo', 'monitor', 'mirror', 'sitting', 'furniture', 'bedroom', 'large', 'white', 'screen', 'filled', 'refrigerator', 'water', 'bed', 'man', 'boat', 'standing', 'bus']
-['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'monitor', 'mirror', 'furniture', 'sitting', 'bedroom', 'white', 'screen', 'large', 'filled', 'refrigerator', 'bed', 'water', 'bus', 'man', 'boat']
+['indoor', 'room', 'living', 'window', 'view', 'television', 'table', 'monitor', 'furniture', 'mirror', 'screen', 'fire', 'white', 'filled', 'large', 'bedroom', 'water', 'refrigerator', 'boat', 'man', 'bed', 'bus']
+['indoor', 'room', 'view', 'car', 'sitting', 'photo', 'television', 'mirror', 'living', 'monitor', 'table', 'fire', 'white', 'filled', 'bedroom', 'furniture', 'refrigerator', 'bus', 'seat', 'screen', 'large', 'water', 'bed', 'boat', 'man', 'cat', 'plane']
+['indoor', 'photo', 'television', 'window', 'mirror', 'view', 'room', 'monitor', 'sitting', 'screen', 'fire', 'table', 'man', 'living', 'white', 'water', 'bedroom', 'seat', 'large', 'boat', 'holding', 'bus', 'phone', 'bed', 'standing']
+['indoor', 'room', 'living', 'window', 'television', 'table', 'monitor', 'view', 'photo', 'fire', 'sitting', 'white', 'furniture', 'screen', 'mirror', 'filled', 'bedroom', 'refrigerator', 'large', 'water', 'man', 'bed', 'boat', 'standing', 'bus']
+['indoor', 'room', 'window', 'living', 'table', 'television', 'view', 'photo', 'monitor', 'mirror', 'sitting', 'fire', 'furniture', 'bedroom', 'large', 'white', 'screen', 'filled', 'refrigerator', 'water', 'bed', 'man', 'boat', 'standing', 'bus']
+['indoor', 'room', 'living', 'window', 'television', 'table', 'view', 'monitor', 'mirror', 'furniture', 'sitting', 'fire', 'bedroom', 'white', 'screen', 'large', 'filled', 'refrigerator', 'bed', 'water', 'bus', 'man', 'boat']
 
 
