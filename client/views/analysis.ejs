@@ -76,7 +76,7 @@
           <source src="<%=vid.file_path%>" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-    <div id="video_name">Name: <%=timestamps[0].video_name %></div>
+    <div id="video_name">Camera: <%=timestamps[0].video_name %></div>
   </div>
 
   <div id="timestamp_border" class="col-sm-2 sidenav">
@@ -84,9 +84,8 @@
     <div style="max-height: 600;overflow-y: scroll;">
       <% timestamps.forEach(function(timestamp) {%>
         <div class="well">
-          <p class="time_stamp_font">Path: <%=timestamp.file_path %></p>
-          <p class="time_stamp_font">min: <%=timestamp.min %></p>
-          <p class="time_stamp_font">sec: <%=timestamp.sec %></p>
+          <span class="time_stamp_font"><%=timestamp.min %> min: </span>
+          <span class="time_stamp_font"><%=timestamp.sec %> sec</span>
           <p class="time_stamp_font">Objects: <%=timestamp.sus_objects %></p>
           <button onclick="getElementById('myVideo').currentTime=<%=timestamp.sec %>">What is the time?</button>
         </div>
